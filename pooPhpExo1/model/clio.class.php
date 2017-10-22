@@ -7,7 +7,7 @@ class Clio{
 
   // --------constante ATTRIBU porte
   // --------------------------------
-    const PORTE3=3;
+    const PORTE3=3; 
     const PORTE5=5;
 
   // --------constante ATTRIBU prix
