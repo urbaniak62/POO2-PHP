@@ -22,6 +22,7 @@ public function __construct ($couleur,$porte,$prix){
   $this->setCouleur($couleur);
   $this->setPorte($porte);
   $this->setPrix($prix);
+
 }
 
 // --------------Mutatteur
