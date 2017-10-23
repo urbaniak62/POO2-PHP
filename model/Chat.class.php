@@ -2,7 +2,7 @@
 require_once('../controleur/object.php');
 require_once('connection.class.php');
 require_once("bdd.class.php");
-
+require_once("../vue/index.php");
 
 class Chat{
   private $_nom;

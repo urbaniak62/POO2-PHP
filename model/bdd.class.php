@@ -11,7 +11,7 @@ require_once('connection.class.php');
         $this->_bdd=$bdd;
 
 }
-// ---------------INSERTIoN dans base de donné
+// ---------------INSERTION dans base de donné
 
     public function insertion(chat $insert){
       $req=connection()-> prepare('INSERT INTO chat(nom,age,sexe,couleur)
@@ -26,9 +26,9 @@ require_once('connection.class.php');
 }
 // ---------------RECUPERATION des données
 // ----------------------------------------
-public function recup(chat $recup){
+public function recup(){
   $req=connection()->query('SELECT * FROM chat');
-  $donnees=$req->fetch();
+  $donnees=$req->fetchAll();
 }
 }
 ?>
