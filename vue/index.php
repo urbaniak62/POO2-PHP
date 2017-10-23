@@ -5,7 +5,7 @@ include('header.php');
 
  <div class="row">
      <div class="input-field col s6">
-       <input value=" " name"nom" type="text" class="chat">
+       <input value=" " name="nom" type="text" class="chat">
        <label class="active" for="nom">Name</label>
      </div>
    </div>

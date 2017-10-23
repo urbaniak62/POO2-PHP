@@ -31,10 +31,12 @@ class Chat{
   // ----------------------
 
   public function setNom($nom){
-    if (strlen($nom>=10)) {
+    if (strlen($nom)>=10) {
       echo "ce chat à un nom trop long";
+    }else {
+      $this->_nom=$nom;
     }
-    $this->_nom=$nom;
+
     }
 
   public function setAge($age){
@@ -51,7 +53,7 @@ class Chat{
     }
   }
   public function setCouleur($couleur){
-    if (in_array($couleur, [sel::COULEUR_B, self::COULEUR_BL, self::COULEUR_R])) {
+    if (in_array($couleur, [self::COULEUR_B, self::COULEUR_BL, self::COULEUR_R])) {
       $this->_couleur=$couleur;
     }
   }
