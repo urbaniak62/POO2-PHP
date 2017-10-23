@@ -24,3 +24,11 @@ require_once('connection.class.php');
   'couleur'=>$insert->getCouleur()
   ));
 }
+// ---------------RECUPERATION des données
+// ----------------------------------------
+public function recup(chat $recup){
+  $req=connection()->query('SELECT * FROM chat');
+  $donnees=$req->fetch();
+}
+}
+?>

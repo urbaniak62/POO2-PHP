@@ -1,6 +1,10 @@
 <?php
-function chargerClasse ($classe) {
+include('header.php');
+ ?>
 
-  require $classe . '../.class.php';
-}
-spl_autoload_register('chargerClasse');
+
+
+ <?php
+include('footer.php');
+
+  ?>

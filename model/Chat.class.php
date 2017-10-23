@@ -1,6 +1,6 @@
 <?php
 require_once('../controleur/object.php');
-require_once('connection.php');
+require_once('connection.class.php');
 require_once("bdd.class.php");
 
 
@@ -31,11 +31,19 @@ class Chat{
   // ----------------------
 
   public function setNom($nom){
+    if (strlen($nom>=10)) {
+      echo "ce chat à un nom trop long";
+    }
     $this->_nom=$nom;
     }
 
   public function setAge($age){
+    if ($age >=30) {
+      echo "ce chat est trop vieux";
+    }
+    else{
     $this->_age=$age;
+    }
   }
   public function setSexe($sexe){
     if (in_array($sexe, [self::SEXE_M, self::SEXE_F])){
@@ -50,16 +58,16 @@ class Chat{
   // -------------getters
   // -----------------------------
   public function getNom(){
-    return $this->$nom;
+    return $this->_nom;
   }
   public function getAge(){
-    return $this->$age;
+    return $this->_age;
   }
   public function getSexe(){
-    return $this->$sexe;
+    return $this->_sexe;
   }
   public function getCouleur(){
-    return $this->$couleur;
+    return $this->_couleur;
   }
   // ------function affiche
   // -----------------------
