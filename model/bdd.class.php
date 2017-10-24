@@ -1,5 +1,6 @@
 <?php
 require_once('connection.class.php');
+// require_once('../vue/index.php');
   class Bdd
   {
     public $_bdd;
@@ -28,7 +29,9 @@ require_once('connection.class.php');
 // ----------------------------------------
 public function recup(){
   $req=connection()->query('SELECT * FROM chat');
-  $donnees=$req->fetchAll();
+
+  $chats=$req->fetchAll(PDO::FETCH_ASSOC);
+  return $chats;
+
+  }
 }
-}
-?>

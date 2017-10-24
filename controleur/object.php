@@ -3,10 +3,11 @@
 require_once('../model/connection.class.php');
 require_once('../model/Chat.class.php');
 require_once('../model/bdd.class.php');
-require_once('../vue/index.php');
+
 
 // connection Bdd
 // ---------------
+
 $manager= new Bdd('bdd');
 
 // insertion Bdd
@@ -15,12 +16,13 @@ $manager= new Bdd('bdd');
 if (isset ($_POST['nom']) && isset($_POST['age']) && isset($_POST['sexe']) && isset($_POST['couleur'])) {
   $chat2=new Chat ($_POST['nom'],$_POST['age'],$_POST['sexe'],$_POST['couleur']);
   $manager->insertion($chat2);
-  var_dump($chat2);
-  var_dump($manager);
+  // var_dump($chat2);
+  // var_dump($manager);
 }
-else {
-  echo "veuillez remplir tous les champ";
-}
+
+$chats = $manager->recup();
+
+require_once('../vue/index.php');
 // object chat miaou
 // ------------------
 // $miaou = new Chat ("grosminez",5,Chat::SEXE_M,Chat::COULEUR_R );
